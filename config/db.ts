@@ -1,16 +1,18 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const DB_URI = process.env.MongoDB_URL as String;
-const LIVE_URI = process.env.DB_Connection_String?.toString();
-console.log("here", DB_URI);
+dotenv.config();
+
+const DB_URI: string = process.env.MongoDB_URL?.toString()!;
+const LIVE_URI: string = process.env.DB_Connection_String?.toString()!;
 
 const dbConfig = async () => {
-  // try {
-  //   const connect = await mongoose.connect(DB_URI?.toString());
-  //   console.log(`database is connected to ${connect.connection.host}`);
-  // } catch (error) {
-  //   console.log(`unable to connect to database ${error}`);
-  // }
+  try {
+    const connect = await mongoose.connect(DB_URI);
+    // console.log(`database is connected to ${connect.connection.host}`);
+  } catch (error) {
+    console.log(`unable to connect to database ${error}`);
+  }
 };
 
 export default dbConfig;

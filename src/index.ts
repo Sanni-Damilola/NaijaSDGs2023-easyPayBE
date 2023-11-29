@@ -1,8 +1,10 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import dbConfig from "../config/db";
+import dotenv from "dotenv";
 
-const PORT = process.env.PORT || 2023;
+dotenv.config();
+const PORT = process.env.PORT;
 
 const app: Application = express();
 dbConfig();
