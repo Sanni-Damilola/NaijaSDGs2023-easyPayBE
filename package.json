@@ -1,13 +1,12 @@
 {
-  "name": "auth(backend)",
+  "name": "naijasdgs2023-easypaybe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --files ./src/index.ts",
-    "start": "node ./dist/src/index.js",
-    "build": "tsc"
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "node ./dist/src/index.js"
   },
   "keywords": [],
   "author": "",
